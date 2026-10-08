@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <title>Just Filed</title>
+    <link rel="stylesheet" href="../src/brand.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M14 13V16.5" stroke="#68DBAA" stroke-width="6.2" stroke-linecap="round" />
+          <path d="M14 25A10 10 0 0 0 34 25V13" stroke="#FFFFFF" stroke-width="6.2" stroke-linecap="round" />
+          <circle cx="24" cy="24.8" r="4.4" fill="#68DBAA" />
+        </svg>
+        Just Filed
+      </div>
+      <button id="open-options" class="icon-button" aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="4" cy="10" r="1.8" />
+          <circle cx="10" cy="10" r="1.8" />
+          <circle cx="16" cy="10" r="1.8" />
+        </svg>
+      </button>
+    </header>
+
+    <main id="app" aria-live="polite"></main>
+
+    <footer>
+      <span>Made by <a href="https://www.justusability.com/" target="_blank" rel="noopener">Justusability</a></span>
+      <span id="tidy-slot"></span>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

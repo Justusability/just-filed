@@ -1,0 +1,12 @@
+{
+  "name": "just-filed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension that suggests the right folder when you save a bookmark.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "package": "sh scripts/package.sh"
+  }
+}
