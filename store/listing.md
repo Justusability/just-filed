@@ -47,8 +47,17 @@ Made by Justusability, who find where customers get stuck and fix it. https://ww
 3. `screenshot-3-tidy.png`: Tidy up bookmarks that look out of place.
 4. `screenshot-4-private.png`: The AI runs on your computer.
 
+**Store icon** (128×128)
+`store-icon-128.png`
+
 **Small promo tile** (440×280)
 `promo-small.png`
+
+**Marquee promo tile** (1400×560, optional; used if Google features the extension)
+`promo-marquee.png`
+
+**Promo video**
+Leave empty for now.
 
 **Official URL / Homepage**
 https://www.justusability.com
