@@ -2,7 +2,7 @@
 
 Effective 8 October 2026
 
-Just Filed is a Chrome extension made by Justusability. It helps you put bookmarks in the right folder. This policy explains what it reads, what it keeps and what it shares.
+Just Filed is a Chrome extension made by Cumulative Consulting Pty Ltd, trading as Justusability ("we"). It helps you put bookmarks in the right folder. This policy explains what it reads, what it keeps and what it shares.
 
 ## The short version
 
