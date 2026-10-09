@@ -4,6 +4,7 @@ import { bumpLearned } from '../src/learn.js';
 
 const app = document.getElementById('app');
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
+const POPUP_MAX = 596; // Chrome's popup height limit is 600px
 
 const el = (tag, props = {}, ...children) => {
   const node = Object.assign(document.createElement(tag), props);
@@ -200,8 +201,20 @@ function renderPicker() {
 
   let items = [];
   let selected = 0;
+  let painted = false;
+
+  // Chrome cuts popups off at 600px tall. Give the list whatever room the rest of the pane leaves,
+  // so a long page title or a two-line heading makes the list scroll instead of the whole pane.
+  const fitList = () => {
+    const rest = document.body.offsetHeight - list.offsetHeight;
+    list.style.maxHeight = `${Math.max(140, Math.min(318, POPUP_MAX - rest))}px`;
+  };
 
   const paint = () => {
+    // Only the first paint eases in. After that, typing, arrow keys and hovering repaint the list
+    // instantly, so the results do not flicker on every keystroke.
+    if (painted) list.classList.remove('enter');
+    painted = true;
     list.replaceChildren(
       ...items.map((item, i) => {
         const badge = el('span', { className: item.kind === 'create' ? 'num new' : 'num' });
@@ -232,6 +245,7 @@ function renderPicker() {
     );
     if (items.length) input.setAttribute('aria-activedescendant', `opt-${selected}`);
     else input.removeAttribute('aria-activedescendant');
+    fitList();
     list.children[selected]?.scrollIntoView({ block: 'nearest' });
   };
 

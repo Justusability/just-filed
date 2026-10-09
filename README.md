@@ -2,6 +2,8 @@
 
 **No head scratching. Just filed.**
 
+<p align="center"><img src="media/demo.gif" width="720" alt="Just Filed in action: typing three letters finds the Recipes folder, typing a new name creates a Datasets folder, and a savings article saved under AI tools gets a suggestion to move it to Finance / Banking."></p>
+
 Chrome's bookmark bubble makes you scroll a dropdown to find a folder. Just Filed gives you a search box instead: type a few letters to find any folder, or type a new name to create one, and press Enter. It also lists the folders the page most likely belongs in.
 
 **[Add to Chrome from the Chrome Web Store](https://chromewebstore.google.com/detail/just-filed-ai-bookmark-fo/nikgadakbbbnaelaedjkaflpodafjmgm)**
