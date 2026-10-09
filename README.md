@@ -4,6 +4,8 @@
 
 Chrome's bookmark bubble makes you scroll a dropdown to find a folder. Just Filed gives you a search box instead: type a few letters to find any folder, or type a new name to create one, and press Enter. It also lists the folders the page most likely belongs in.
 
+**[Add to Chrome from the Chrome Web Store](https://chromewebstore.google.com/detail/just-filed-ai-bookmark-fo/nikgadakbbbnaelaedjkaflpodafjmgm)**
+
 Made by [Justusability](https://www.justusability.com/). Free and open source.
 
 ## What it does
@@ -67,7 +69,11 @@ So it is good at noticing that something is in the wrong place, and right about 
 
 This is one person's library, and the thresholds were tuned on it, so expect different numbers on yours. Folders organised by project are harder to predict than folders organised by topic, because the page does not say which project it was saved for.
 
-## Install from source
+## Install
+
+Get it from the [Chrome Web Store](https://chromewebstore.google.com/detail/just-filed-ai-bookmark-fo/nikgadakbbbnaelaedjkaflpodafjmgm). Updates arrive automatically.
+
+### From source
 
 1. Download or clone this repository.
 2. Open `chrome://extensions` and switch on **Developer mode**.
