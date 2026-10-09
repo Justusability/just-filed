@@ -18,6 +18,7 @@ Made by [Justusability](https://www.justusability.com/). Free and open source.
 - **Suggests folders** using an AI model that runs on your computer, plus where you have been saving lately and where the same site already lives.
 - **Notices a misfiled bookmark.** If a page clearly belongs in a different part of your library from where it landed, Just Filed opens and says so.
 - **Interrupts only when it is confident** that another folder clearly beats where the bookmark landed. Otherwise it waits for you to open it (Alt+Shift+F).
+- **Tidies up what is already there.** Tidy up opens in Chrome's side panel and goes through bookmarks that look out of place, and loose ones with a likely home, one at a time: move, keep or skip. The panel stays open while you browse, so **Open** shows the page beside it, and it picks up where you left off.
 - **Undo** on every action, including removing a folder it just created.
 
 ## Privacy
@@ -30,6 +31,7 @@ Everything runs in your browser. There is no server, no account and no analytics
 | `storage` | Remember settings and what it has learned, on this device only |
 | `activeTab` | Read the title and address of the page you are on, only when you open Just Filed |
 | `offscreen` | Keep the AI model loaded in a hidden page so answers are instant |
+| `sidePanel` | Show Tidy up in Chrome's side panel, so it stays open while you browse |
 
 ## The AI model
 
@@ -100,6 +102,8 @@ runs the ranking tests (Node 20 or later, no dependencies).
 | `src/semantic.js` | Matching by meaning, combined with the rules |
 | `ai/` | The bundled model, tokenizer and runtime |
 | `popup/` | The pane: search, suggestions, welcome, settings |
+| `panel/` | Tidy up, in the side panel |
+| `src/picker.js`, `src/ui.js` | The folder picker and other pieces the pane and the panel share |
 
 ## Roadmap
 

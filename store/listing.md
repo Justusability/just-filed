@@ -32,7 +32,9 @@ SUGGESTIONS THAT GET IT RIGHT
 
 TIDY UP WHAT IS ALREADY THERE
 • Just Filed checks your library for bookmarks that look out of place, and loose ones that have a likely home.
-• Review them one at a time: move, keep or skip. Bookmarks you keep are never suggested again.
+• Review them one at a time in the side panel: move, keep or skip. Bookmarks you keep are never suggested again.
+• The panel stays open while you browse. Open a bookmark and its page appears beside the panel, so you can decide with it in front of you.
+• Close it whenever you like. It picks up where you left off.
 
 PRIVATE BY DESIGN
 • The AI model is bundled with the extension and runs on your computer.
@@ -78,6 +80,7 @@ Just Filed helps people file their Chrome bookmarks into the right folder: it le
 | `storage` | Saves the user's settings and what the extension has learned about where they file each website, on the device only. |
 | `activeTab` | When the user opens Just Filed, reads the title and address of the current tab so it can be bookmarked straight into the chosen folder. No access at any other time and no access to page content. |
 | `offscreen` | Hosts the bundled on-device AI model in a hidden extension page so it stays loaded between saves and answers in milliseconds. The model runs locally; nothing is sent over the network. |
+| `sidePanel` | Shows Tidy up, the review of bookmarks that look out of place, in Chrome's side panel so it stays open beside the page while the user checks each bookmark. The panel opens only when the user clicks "to tidy" in the popup or picks Just Filed from Chrome's side panel menu. |
 
 **Remote code**
 No, I am not using remote code. (All code, including the WebAssembly model runtime and the model file, is packaged with the extension.)

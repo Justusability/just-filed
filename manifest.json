@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Just Filed: AI bookmark folders",
   "short_name": "Just Filed",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "File any bookmark in seconds: type to find a folder or make a new one, with on-device AI suggestions. Nothing leaves your browser.",
   "author": "Justusability",
   "homepage_url": "https://www.justusability.com/",
@@ -11,8 +11,12 @@
     "bookmarks",
     "storage",
     "activeTab",
-    "offscreen"
+    "offscreen",
+    "sidePanel"
   ],
+  "side_panel": {
+    "default_path": "panel/panel.html"
+  },
   "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
   },
