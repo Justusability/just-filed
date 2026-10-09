@@ -185,7 +185,10 @@ function lastMoveLine() {
   const undo = el('button', { className: 'link', type: 'button', textContent: 'Undo' });
   undo.setAttribute('aria-label', `Undo moving ${lastMove.title} to ${lastMove.leaf}`);
   undo.addEventListener('click', undoLast, { once: true });
-  return el('p', { className: 'last-move' }, el('span', { textContent: `Moved “${lastMove.title}” to ${lastMove.leaf}.` }), undo);
+  // Shorten a long title here, so the line still has room to say where the bookmark went.
+  const title = lastMove.title.length > 30 ? `${lastMove.title.slice(0, 28).trimEnd()}…` : lastMove.title;
+  const said = el('span', { textContent: `Moved “${title}” to ${lastMove.leaf}.`, title: `Moved “${lastMove.title}” to ${lastMove.leaf}.` });
+  return el('p', { className: 'last-move' }, said, undo);
 }
 
 async function move(choice) {

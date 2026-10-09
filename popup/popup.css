@@ -92,12 +92,13 @@ h1 + .page {
   margin: 0;
   padding: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr); /* never wider than the pane, however long a folder name is */
   gap: 8px;
 }
 
 .suggestion {
   display: grid;
-  grid-template-columns: 30px 1fr;
+  grid-template-columns: 30px minmax(0, 1fr);
   align-items: center;
   gap: 12px;
   width: 100%;
