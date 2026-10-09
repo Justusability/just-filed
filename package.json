@@ -1,6 +1,6 @@
 {
   "name": "just-filed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "description": "Chrome extension that suggests the right folder when you save a bookmark.",

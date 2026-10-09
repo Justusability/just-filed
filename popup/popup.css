@@ -3,6 +3,9 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,10 +23,16 @@ header {
   background: transparent;
   cursor: pointer;
 }
+.icon-button {
+  color: var(--green-100);
+}
 .icon-button svg {
   width: 18px;
   height: 18px;
   fill: var(--green-100);
+}
+.icon-button svg path {
+  fill: none;
 }
 .icon-button:hover {
   background: var(--green-700);
@@ -33,20 +42,23 @@ header {
 }
 
 main {
-  padding: 14px 16px 4px;
+  padding: 16px 16px 0;
 }
 
 h1 {
   font-size: 23px;
-  margin: 5px 0 6px;
+  margin: 4px 0 12px;
 }
 h1 em {
   font-style: normal;
   color: var(--green-700);
 }
 
+h1 + .page {
+  margin-top: -8px;
+}
 .page {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: var(--muted);
   font-size: 12.5px;
   white-space: nowrap;
@@ -80,7 +92,7 @@ h1 em {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .suggestion {
@@ -165,7 +177,7 @@ li:nth-child(3n + 3) .num {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .hint {
   font-size: 11.5px;
@@ -177,7 +189,7 @@ li:nth-child(3n + 3) .num {
   align-items: center;
   gap: 12px;
   padding: 12px 14px;
-  margin: 10px 0 0;
+  margin: 0;
   border-radius: 18px;
   background: var(--white);
 }
@@ -201,7 +213,7 @@ li:nth-child(3n + 3) .num {
 }
 
 .lede {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: var(--muted);
   font-size: 13px;
 }
@@ -212,7 +224,7 @@ footer {
   justify-content: space-between;
   gap: 10px;
   min-height: 40px;
-  padding: 8px 16px 10px;
+  padding: 12px 16px 16px;
   font-size: 11.5px;
   color: var(--muted);
 }
@@ -240,7 +252,7 @@ footer {
   color: var(--green-900);
 }
 .tip {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   padding: 11px 14px;
   border-radius: 18px;
   background: var(--white);
@@ -254,7 +266,7 @@ footer {
   justify-content: flex-end;
 }
 .panel {
-  margin: 8px 0 10px;
+  margin: 0 0 8px;
   padding: 12px 14px;
   border-radius: 18px;
   background: var(--white);
@@ -398,7 +410,7 @@ header {
   grid-template-columns: 30px 1fr auto;
   align-items: center;
   gap: 12px;
-  margin: 2px 0 10px;
+  margin: 0 0 12px;
   padding: 9px 10px 9px 12px;
   border-radius: 18px;
   background: var(--green-900);
@@ -512,7 +524,7 @@ main.enter .arrow-mark svg {
   outline-color: var(--green-700);
 }
 .credits {
-  margin: 4px 0 10px;
+  margin: 4px 0 0;
   font-size: 11px;
   line-height: 1.4;
   color: var(--muted);

@@ -73,7 +73,12 @@ let state;
 let tidyCount = 0;
 
 // Each new screen eases in; typing and small updates do not replay it.
+// Every screen calls enter(), so it also resets the header button: a cross on settings, the ⋯ everywhere else.
+let showingSettings = false;
 function enter() {
+  headerButton(showingSettings);
+  showingSettings = false;
+  window.scrollTo(0, 0); // a new screen starts at the top, even if the last one was scrolled
   app.classList.remove('enter');
   void app.offsetWidth;
   app.classList.add('enter');
@@ -832,9 +837,23 @@ async function renderSettings() {
     credits(),
     el('div', { className: 'actions' }, intro, back)
   );
-  back.focus();
+  showingSettings = true;
   enter();
+  app.querySelector('input, button')?.focus({ preventScroll: true });
 }
 
-document.getElementById('open-options').addEventListener('click', renderSettings);
+// The ⋯ button opens settings, and closes them again, so leaving settings never needs a scroll to the Back button.
+const DOTS = document.getElementById('open-options').innerHTML;
+const CROSS = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>';
+function headerButton(close) {
+  const b = document.getElementById('open-options');
+  b.innerHTML = close ? CROSS : DOTS;
+  b.setAttribute('aria-label', close ? 'Close settings' : 'Settings');
+  b.title = close ? 'Close settings' : 'Settings';
+  b.dataset.close = close ? 'true' : '';
+}
+document.getElementById('open-options').addEventListener('click', (e) => {
+  if (e.currentTarget.dataset.close) load();
+  else renderSettings();
+});
 load();
